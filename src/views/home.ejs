@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<main id="main-content">
+  <section class="hero" aria-labelledby="welcome-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Volunteer. Connect. Make an impact.</p>
+      <h1><%= title %></h1>
+      <h2 id="welcome-title">Welcome to the CSE 340 Service Network!</h2>
+      <p class="lead">Our mission is to promote service across the world by connecting volunteers with service opportunities in their community.</p>
+      <a class="button-link" href="/projects">Explore service projects</a>
+    </div>
+    <img class="main-logo" src="/images/cse340-service-network.png" alt="CSE 340 Service Network logo">
+  </section>
+  <section aria-labelledby="get-involved-title">
+    <h2 id="get-involved-title" class="section-heading">Find your way to help</h2>
+    <ul class="card-grid">
+      <li class="card"><span class="card-icon" aria-hidden="true">01</span><h3>Meet our partners</h3><p>Discover organizations working to strengthen their communities.</p><a href="/organizations">View organizations</a></li>
+      <li class="card"><span class="card-icon" aria-hidden="true">02</span><h3>Explore projects</h3><p>Learn about practical ways to volunteer and contribute.</p><a href="/projects">View projects</a></li>
+      <li class="card"><span class="card-icon" aria-hidden="true">03</span><h3>Browse categories</h3><p>Find causes that match your interests and skills.</p><a href="/categories">View categories</a></li>
+    </ul>
+  </section>
+</main>
+<%- include('partials/footer') %>

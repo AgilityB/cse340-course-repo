@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSE 340 Service Network connects volunteers with organizations and service opportunities.">
+  <title><%= title %> | CSE 340 Service Network</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">CSE 340 Service Network</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/" <% if (title === 'Home') { %>aria-current="page"<% } %>>Home</a></li>
+          <li><a href="/organizations" <% if (title === 'Our Partner Organizations') { %>aria-current="page"<% } %>>Organizations</a></li>
+          <li><a href="/projects" <% if (title === 'Service Projects') { %>aria-current="page"<% } %>>Projects</a></li>
+          <li><a href="/categories" <% if (title === 'Service Categories') { %>aria-current="page"<% } %>>Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
