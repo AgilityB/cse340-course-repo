@@ -4,6 +4,8 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { testConnection } from './src/models/db.js';
 import { getAllOrganizations } from './src/models/organizations.js';
+import { getAllCategories } from './src/models/categories.js';
+import { getAllProjects } from './src/models/projects.js';
 
 
 
@@ -46,13 +48,25 @@ app.get('/organizations', async (req, res) => {
 });
 
 app.get('/projects', async (req, res) => {
-    const title = 'Service Projects';
-    res.render('projects', { title });
+    try {
+        const projects = await getAllProjects();
+        const title = 'Service Projects';
+        res.render('projects', { title, projects });
+    } catch (error) {
+        console.error('Failed to load projects:', error);
+        res.status(500).send('Unable to load projects.');
+    }
 });
 
 app.get('/categories', async (req, res) => {
-    const title = 'Service Categories';
-    res.render('categories', { title });
+    try {
+        const categories = await getAllCategories();
+        const title = 'Service Categories';
+        res.render('categories', { title, categories });
+    } catch (error) {
+        console.error('Failed to load categories:', error);
+        res.status(500).send('Unable to load categories.');
+    }
 });
 
 app.listen(PORT, async () => {
